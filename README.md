@@ -19,9 +19,9 @@
 - X-mas season heat the pick sales record
 - It fell on the week 52 from 2010 to 2012, given that weeks ends on Friday.
 - However sales opportunities are different. it means:
-	- 2010. 12. 25(Sat, 52th Week): 52 Week **didn't take advantage** of the x-mas season
-	- 2011. 12. 25(Sun, 52th Week): 52 Week had only **1 day(Sat)** to take advantage of the x-mas season
-	- test data) 2012. 12. 25(Tue, 52th Week): 52 Week had **3 day(Sat, Sun, Mon)** to take advantage of the x-mas season
+	- 2010-12-25(Sat, 52th Week): 52 Week **didn't take advantage** of the x-mas season
+	- 2011-12-25(Sun, 52th Week): 52 Week had only **1 day(Sat)** to take advantage of the x-mas season
+	- test data) 2012-12-25(Tue, 52th Week): 52 Week had **3 day(Sat, Sun, Mon)** to take advantage of the x-mas season
 - Thus, after predicting weekly sales, It needs to correct 52th week sales like by shift(exchange) 2.5 day with 51th week.
 
 <img src='compare.png'>
