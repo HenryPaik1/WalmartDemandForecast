@@ -33,7 +33,8 @@ def pca_stl_sarima(df, data_test, dept):
             fcst = mod.predict(fcst_len)
 
             # reframe
-            start = datetime.strptime('2012-11-02', '%Y-%m-%d')
+            df_inverse = pivot_df(df, dept)
+            start = df_inverse.index[-1] + relativedelta(weeks=1)
             idx = pd.DatetimeIndex(start=start, periods=fcst_len, freq='W-FRI')
             re_idx = [date - relativedelta(weeks=52) for date in idx]
             fcst = pd.Series(fcst, index=re_idx)
@@ -72,6 +73,7 @@ def run_pca_stl_sarima(df, test):
         text = 'predict dept {} start'.format(dept)
         send_text(name, text)
         
+        i=0
         for fcst_yield_df in pca_stl_sarima(df, test, dept):
             i += 1
             ans = ans.append(fcst_yield_df, ignore_index=True)
