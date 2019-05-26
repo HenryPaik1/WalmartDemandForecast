@@ -7,8 +7,8 @@
 	- explanation: https://www.kaggle.com/c/walmart-recruiting-store-sales-forecasting/discussion/8125#latest-357454 
 	- key adjustment: https://www.kaggle.com/c/walmart-recruiting-store-sales-forecasting/discussion/8028
 - Models reproduced by python3
-	- PCA + ETS(ExponenTial Smoothing)
-	- PCA + stl + SARIMAX
+	- PCA + ETS(ExponenTial Smoothing): score 2609.84528(best)
+	- PCA + stl + SARIMA: score 2689.39573
 	- +) PCA + customed seasonal adjust+ SARIMA: for seasonal adjustment,  I dedcut the average of every week which is considered deterministic seasonality (eg. avg(2010/2011/2012 1st week), ..., avg(2010/2011 52th week))
 
 ## Key concept in the Winner's models
