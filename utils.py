@@ -79,6 +79,7 @@ def pivot_df(df, dept=1):
     end = df_pivot.index[-1]
     idx = pd.DatetimeIndex(start=start, end=end, freq='W-FRI')
     df_pivot = df_pivot.merge(pd.DataFrame(idx).rename(columns={0:'Date'}), how='outer', on='Date').fillna(0)
+    df_pivot = df_pivot.sort_index()
     return df_pivot.set_index('Date')
 
 def reframe_df(previous_df, processed_data):
