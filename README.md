@@ -1,7 +1,7 @@
 # Walmart Demand Forecasting
 ## time series analysis
 - Kaggle: https://www.kaggle.com/c/walmart-recruiting-store-sales-forecasting/data
-- reference: 
+- Reference: 
 	- kaggle winner's code
 	- github: https://github.com/davidthaler/Walmart_competition_code
 	- explanation: https://www.kaggle.com/c/walmart-recruiting-store-sales-forecasting/discussion/8125#latest-357454 
@@ -28,4 +28,6 @@
 
 ## Limitation
 - python3 module `auto_arima` much slower than `R`'s module. It took a couple days to make model by `auto_arima` and so It was hard to compare performances with others'.
+
+
 
