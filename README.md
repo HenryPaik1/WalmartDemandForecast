@@ -13,7 +13,7 @@
 
 ## Key concept
 
-1. PCA: PCA is used to find signal through the specific department. It additionally make it easier to deal with missing values which is NA or which is not exist in `train.csv`, but in `test.csv`. I assume that missing value means no sales occurs during that week. 
+1. PCA: PCA is used to find signal through the specific department. It additionally make it easier to deal with missing values which is NA or which is not exist in `train.csv`, but in `test.csv`. I assume that missing value means no sales occurs during that week. (Please refer to `PCA_details.ipynb` in this repo for the details)
 
 2. Shift: Shift is used to reticfy the error **weekly sales record itself bring about**. Here is brief explanation:
 - X-mas season heat the pick sales record
