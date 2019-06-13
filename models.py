@@ -12,7 +12,7 @@ from dateutil.relativedelta import relativedelta
 from dateutil import rrule
 from utils import *
 
-def svd_stl_ets(data, data_test, dept, seasonal='add'):
+def pca_stl_ets(data, data_test, dept, seasonal='add'):
     name = 'pca_stl_ets'
     
     pca_data = pca_decomposition(data, dept)
@@ -56,7 +56,7 @@ def svd_stl_ets(data, data_test, dept, seasonal='add'):
             send_message(store, name, store=True, fail=True)
             pass
         
-def run_svd_stl_ets(df, test):
+def run_pca_stl_ets(df, test):
     name = 'pca_stl_ets'
     
     ans = pd.DataFrame()
@@ -71,7 +71,7 @@ def run_svd_stl_ets(df, test):
         text = 'predict dept {} start'.format(dept)
         send_text(name, text)
         
-        for fcst_yield_df in svd_stl_ets(df, test, dept):
+        for fcst_yield_df in pca_stl_ets(df, test, dept):
             i += 1
             ans = ans.append(fcst_yield_df, ignore_index=True)
             ans.to_csv('complete_svd_ets.csv', index=False)
@@ -163,7 +163,7 @@ def run_pca_stl_sarima(df, test):
 
     return ans
 
-def svd_ets(data, data_test, dept, seasonal='add'):
+def pca_ets(data, data_test, dept, seasonal='add'):
     name = 'pca_ets'
     
     pca_data = pca_decomposition(data, dept)
@@ -190,7 +190,7 @@ def svd_ets(data, data_test, dept, seasonal='add'):
             send_message(store, name, store=True, fail=True)
             pass
 
-def run_svd_ets(df, test):
+def run_pca_ets(df, test):
     name = 'pca_ets'
     
     ans = pd.DataFrame()
@@ -205,7 +205,7 @@ def run_svd_ets(df, test):
         text = 'predict dept {} start'.format(dept)
         send_text(name, text)
         
-        for fcst_yield_df in svd_ets(df, test, dept):
+        for fcst_yield_df in pca_ets(df, test, dept):
             i += 1
             ans = ans.append(fcst_yield_df, ignore_index=True)
             ans.to_csv('answercsv/complete_svd_ets.csv', index=False)
