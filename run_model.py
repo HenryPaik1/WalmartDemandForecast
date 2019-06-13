@@ -9,7 +9,8 @@ df, test = init_df(df, test)
 print('data loaded')
 print('start fitting')
 
-svd_test = run_svd_ets(df, test)
+svd_stl_test = run_svd_stl_ets(df, test)
+# svd_test = run_svd_ets(df, test)
 # pca_stl_non_seasonalarima_test = run_pca_stl_non_seasonalarima(df, test)
 # pca_custom = run_pca_custom_sarima(df, test)
 
